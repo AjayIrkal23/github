@@ -36,7 +36,7 @@ def filter_stocks():
 
     # Display results as a structured list
     if high_liquidity_stocks:
-        formatted = f"\n**High Liquidity F&O Stocks:**\n  {"-" * 46}    \n"
+        formatted = f"\n**High Liquidity F&O Stocks:**\n\n"
         for stock, volume, cap in high_liquidity_stocks:
             formatted += f"- **{stock}**\n"
             formatted += f"- Avg Volume: {volume}\n"
