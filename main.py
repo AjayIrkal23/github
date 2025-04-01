@@ -6,6 +6,10 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 from telegram.constants import ParseMode  # Add this import
 from FOStocks import filter_stocks
+from flask import Flask, jsonify
+
+
+app = Flask(__name__)
 
 # Telegram Bot Token
 TOKEN = '7620770060:AAEyIkyGnAJDxTF5kFM5Uiwdyp6yJd3_ocg'
@@ -174,5 +178,6 @@ def main():
     application.add_handler(CallbackQueryHandler(button))
     application.run_polling()
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+

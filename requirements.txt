@@ -3,3 +3,4 @@ pandas
 python-telegram-bot==20.3
 ta
 tabulate
+flask
